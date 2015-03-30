@@ -1,0 +1,15 @@
+{
+    "require": {
+        "league/csv": "~7.0",
+        "symfony/console": "~2.6",
+        "stecman/symfony-console-completion": "0.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CsvTransformer\\": "src",
+            "CsvTransformer\\Transformers\\": "src/Transformers",
+            "CsvTransformer\\Commands\\": "src/Commands",
+            "CsvTransformer\\Input\\": "src/Input"
+        }
+    }
+}

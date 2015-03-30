@@ -1,0 +1,6 @@
+.idea
+vendor/
+*.txt
+*.csv
+*.bin
+*.bak
