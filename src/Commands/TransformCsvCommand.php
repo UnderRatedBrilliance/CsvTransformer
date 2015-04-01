@@ -30,6 +30,8 @@ class TransformCsvCommand extends Command{
 
     protected $resultsFilePath = 'results.csv';
 
+    protected $memoryLimit = 512;
+
     /**
      * Configure transform command to console
      */
@@ -74,6 +76,9 @@ class TransformCsvCommand extends Command{
      */
     protected function init(InputInterface $input)
     {
+        //Set New Memory Limit
+        ini_set('memory_limit', $this->getMemoryLimit());
+
         $this->setCsvOptions($input)
             ->setTransformer($input)
             ->setFilePaths($input)
@@ -215,6 +220,11 @@ class TransformCsvCommand extends Command{
     public function getCsvFiles()
     {
         return $this->csvFiles;
+    }
+
+    public function getMemoryLimit()
+    {
+        return (string) $this->memoryLimit.'M';
     }
 
 
