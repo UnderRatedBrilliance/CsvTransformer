@@ -14,6 +14,7 @@ $app = new Application('CSV Transformer', '0.1.0');
 //Add Commands to application
 $app->addCommands([
     new CsvTransformer\Commands\TransformCsvCommand(),
+    new CsvTransformer\Commands\TransformXmltoCsvCommand(),
 ]);
 
 $app->run();
